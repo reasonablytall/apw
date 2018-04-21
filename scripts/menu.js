@@ -1,4 +1,3 @@
-
 window.onload = function() {
   console.log("loaded");
   var contentDiv = document.getElementById("content");
@@ -12,7 +11,7 @@ window.onload = function() {
   update(0);
 
   function update(idx) {
-    if(idx < 0 || idx >= contentDiv.childElementCount) return;
+    if (idx < 0 || idx >= contentDiv.childElementCount) return;
     contentDiv.children[selectedIdx].classList.remove("selected");
     contentDiv.children[idx].classList.add("selected");
     selectedIdx = idx;
@@ -24,17 +23,17 @@ window.onload = function() {
 
   function startCmd() {
     return; // cmdline isn't ready yet... TODO
-    if(cmdTimeout) clearTimeout(cmdTimeout);
-    cmdMode = true;
-    cmdText = ":";
-    cmdDiv.children[0].textContent = cmdText;
+    //if (cmdTimeout) clearTimeout(cmdTimeout);
+    //cmdMode = true;
+    //cmdText = ":";
+    //cmdDiv.children[0].textContent = cmdText;
   }
 
   function updateCmd(e) {
-    if(e.key == "Escape") {
+    if (e.key == "Escape") {
       cmdText = "";
       cmdMode = false;
-    } else if(e.key == "Enter") {
+    } else if (e.key == "Enter") {
       submitCmd();
     } else {
       cmdText += e.key;
@@ -53,11 +52,11 @@ window.onload = function() {
   }
 
   window.onkeydown = (e) => {
-    if(cmdMode) updateCmd(e);
-    else if(e.key == ":") startCmd();
+    if (cmdMode) updateCmd(e);
+    else if (e.key == ":") startCmd();
 
-    else if(e.key == "j") update(selectedIdx + 1);
-    else if(e.key == "k") update(selectedIdx - 1);
-    else if(e.key == "Enter") follow(selectedIdx);
+    else if (e.key == "j") update(selectedIdx + 1);
+    else if (e.key == "k") update(selectedIdx - 1);
+    else if (e.key == "Enter") follow(selectedIdx);
   }
 }

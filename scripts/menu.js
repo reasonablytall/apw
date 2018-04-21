@@ -1,5 +1,4 @@
 window.onload = function() {
-  console.log("loaded");
   var contentDiv = document.getElementById("content");
   var cmdDiv = document.getElementById("cmdline");
   var selectedIdx = 0;

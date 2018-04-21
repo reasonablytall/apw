@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'Iosevka Slab';
+  src: url('/fonts/iosevka-slab-regular.woff2') format('woff2'),
+  url('/fonts/iosevka-slab-regular.woff') format('woff'),
+  url('/fonts/iosevka-slab-regular.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: Iosevka Slab, Helvetica, sans-serif;
+  font-size: 120%;
+}
+
+#content {
+  margin-top: 200px;
+  width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#secondary {
+  margin-top: 20%;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#content div {
+  padding: 5px;
+  /*text-align: center;*/
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.selected {
+  color: white;
+  background: black;
+}
+
+.selected a {
+  color: white;
+}
+
+#cmdline {
+  position: fixed;
+  bottom: 0px;
+  padding: 2px;
+}

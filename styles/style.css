@@ -5,17 +5,25 @@
   url('/fonts/iosevka-slab-regular.ttf') format('truetype');
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: Iosevka Slab, Helvetica, sans-serif;
-  font-size: 120%;
+  font-size: 128%;
+
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #content {
-  width: 250px;
-  margin-top: 200px;
-  margin-right: auto;
-  margin-left: auto;
+  width: 13em;
+  max-width: 90%;
+  margin-top: 1em;
 
   border: 1px dashed black;
   padding: 10px;

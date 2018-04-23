@@ -1,11 +1,11 @@
 window.onload = function() {
-  var contentDiv = document.getElementById("content");
-  var cmdDiv = document.getElementById("cmdline");
-  var selectedIdx = 0;
+  let contentDiv = document.getElementById("content");
+  let cmdDiv = document.getElementById("cmdline");
+  let selectedIdx = 0;
 
-  var cmdMode = false;
-  var cmdText = "";
-  var cmdTimeout = null;
+  let cmdMode = false;
+  let cmdText = "";
+  let cmdTimeout = null;
 
   update(0);
 
